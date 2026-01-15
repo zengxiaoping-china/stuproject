@@ -1,0 +1,35 @@
+# 编译生成的可执行文件和目标文件
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+
+# 调试和日志文件
+*.log
+debug/
+Debug/
+release/
+Release/
+
+# IDE / 编辑器相关
+.vs/
+*.suo
+*.user
+*.vcxproj*
+*.filters
+*.opensdf
+*.sdf
+
+# 临时文件
+*.tmp
+*.bak
+～$*
+
+# 数据文件（如果你用临时 data 文件测试，可选择是否忽略）
+# data.txt

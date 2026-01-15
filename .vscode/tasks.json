@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe build active file",  // ⚠️ 必须与 launch.json 中的 preLaunchTask 完全一致
+            "command": "gcc",  // 或者 "C:/mingw64/bin/gcc.exe"（建议使用前者，依赖 PATH）
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"  // 统一使用 Windows 路径分隔符
+            ],
+            "options": {
+                "cwd": "${fileDirname}"  // 修正：工作目录应该是源文件所在目录
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true  // 设置为默认构建任务
+            },
+            "detail": "编译器: gcc.exe"
+        }
+    ]
+}
